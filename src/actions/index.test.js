@@ -46,3 +46,30 @@ describe("fetchPosts", () => {
     });
   });
 });
+
+describe("createPost", () => {
+  it("should create a single post", () => {
+    axios.post.mockImplementation(() =>
+      Promise.resolve({
+        data: {
+          content: "This is my third post.",
+          id: 3,
+        },
+      }),
+    );
+
+    const store = mockStore({ posts: [] });
+
+    const exepctedType = "CREATE_POST";
+    const expectedPayload = {
+      content: "This is my third post.",
+      id: 3,
+    };
+
+    return store.dispatch(createPost()).then(() => {
+      const [{ type, payload }] = store.getActions();
+      expect(type).toEqual(exepctedType);
+      expect(payload).toEqual(expectedPayload);
+    });
+  });
+});
