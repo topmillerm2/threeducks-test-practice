@@ -9,6 +9,5 @@ export const fetchPosts = () => async dispatch => {
 
 export const createPost = content => async dispatch => {
   const { data } = await axios.post(`${BASE_URL}/posts`, content);
-
   dispatch({ type: "CREATE_POST", payload: data });
 };
