@@ -1,12 +1,32 @@
 {
   "posts": [
     {
-      "id": 1,
-      "content": "This is my first post."
+      "content": "This is my first post.",
+      "id": 1
     },
     {
-      "id": 2,
-      "content": "This is my second post."
+      "content": "This is my second post.",
+      "id": 2
+    },
+    {
+      "content": "Third Post",
+      "id": 3
+    },
+    {
+      "content": "Fourth",
+      "id": 4
+    },
+    {
+      "content": "Fifth",
+      "id": 5
+    },
+    {
+      "content": "Sixth",
+      "id": 6
+    },
+    {
+      "content": "Seventh",
+      "id": 7
     }
   ]
 }
