@@ -35,7 +35,9 @@ class App extends Component {
         </ul>
         <h3>Create a post:</h3>
         <form onSubmit={this.handleSubmitPost}>
+          <label htmlFor="newpost">new post:</label>
           <input
+            id="newpost"
             value={this.state.postContent}
             onChange={e => this.setState({ postContent: e.target.value })}
           />
@@ -49,4 +51,5 @@ const mapStateToProps = ({ posts }) => ({ posts });
 
 const mapDispatchToProps = { fetchPosts, createPost };
 
+export { App };
 export default connect(mapStateToProps, mapDispatchToProps)(App);
